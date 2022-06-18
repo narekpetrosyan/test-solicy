@@ -1,0 +1,39 @@
+.layoutWrapper {
+    display: grid;
+    overflow: hidden;
+    min-height: 100vh;
+    max-height: 100vh;
+    display: grid;
+    grid-template-areas: "header sidebar"
+                         "content sidebar"
+                         "footer sidebar";
+    grid-template-columns: 1fr 250px;
+    grid-template-rows: 70px 1fr 70px;
+    background: whitesmoke;
+
+    .sidebar {
+        grid-area: sidebar;
+        border-left: 1px solid black;
+    }
+
+    .header {
+        grid-area: header;
+        border-bottom: 1px solid black;
+    }
+
+    .content {
+        grid-area: content;
+        position: relative;
+        overflow-y: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+        height: 100%;
+    }
+
+    .footer {
+        grid-area: footer;
+        border-top: 1px solid black;
+    }
+}
